@@ -9,10 +9,10 @@ def job():
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(chrome_options = options, executable_path=r'C:\Users\(your username)\Downloads\chromedriver_win32\chromedriver.exe')
+    driver = webdriver.Chrome(chrome_options = options, executable_path=r'C:\ ~~~ \chromedriver.exe')
 
-    #Linux: /usr/bin/chromedriver
-    #Windows: r'C:\Users\(username)\Downloads\chromedriver_win32\chromedriver.exe'
+    #Linux: ex) /usr/bin/chromedriver
+    #Windows: ex) r'C:\Users\username\Downloads\chromedriver_win32\chromedriver.exe'
 
     id="your id"
     pwd="your password"
@@ -38,4 +38,10 @@ def job():
 
 sched = BlockingScheduler()
 sched.add_job(job, 'cron', day_of_week='0-4', hour='8', minute='40')
+
+'''
+day_of_week : 0-4: 월-금
+hour : 8시
+minute : 40분
+'''
 sched.start()
